@@ -1,0 +1,19 @@
+C:\Users\Anonymous\source\repos\Hira Webhook Destroyer\Hira Webhook Destroyer\bin\Release\net8.0-windows\Hira Webhook Destroyer.exe
+C:\Users\Anonymous\source\repos\Hira Webhook Destroyer\Hira Webhook Destroyer\bin\Release\net8.0-windows\Hira Webhook Destroyer.deps.json
+C:\Users\Anonymous\source\repos\Hira Webhook Destroyer\Hira Webhook Destroyer\bin\Release\net8.0-windows\Hira Webhook Destroyer.runtimeconfig.json
+C:\Users\Anonymous\source\repos\Hira Webhook Destroyer\Hira Webhook Destroyer\bin\Release\net8.0-windows\Hira Webhook Destroyer.dll
+C:\Users\Anonymous\source\repos\Hira Webhook Destroyer\Hira Webhook Destroyer\bin\Release\net8.0-windows\Hira Webhook Destroyer.pdb
+C:\Users\Anonymous\source\repos\Hira Webhook Destroyer\Hira Webhook Destroyer\obj\Release\net8.0-windows\MainWindow.baml
+C:\Users\Anonymous\source\repos\Hira Webhook Destroyer\Hira Webhook Destroyer\obj\Release\net8.0-windows\MainWindow.g.cs
+C:\Users\Anonymous\source\repos\Hira Webhook Destroyer\Hira Webhook Destroyer\obj\Release\net8.0-windows\App.g.cs
+C:\Users\Anonymous\source\repos\Hira Webhook Destroyer\Hira Webhook Destroyer\obj\Release\net8.0-windows\Hira Webhook Destroyer_MarkupCompile.cache
+C:\Users\Anonymous\source\repos\Hira Webhook Destroyer\Hira Webhook Destroyer\obj\Release\net8.0-windows\Hira Webhook Destroyer.g.resources
+C:\Users\Anonymous\source\repos\Hira Webhook Destroyer\Hira Webhook Destroyer\obj\Release\net8.0-windows\Hira Webhook Destroyer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Anonymous\source\repos\Hira Webhook Destroyer\Hira Webhook Destroyer\obj\Release\net8.0-windows\Hira Webhook Destroyer.AssemblyInfoInputs.cache
+C:\Users\Anonymous\source\repos\Hira Webhook Destroyer\Hira Webhook Destroyer\obj\Release\net8.0-windows\Hira Webhook Destroyer.AssemblyInfo.cs
+C:\Users\Anonymous\source\repos\Hira Webhook Destroyer\Hira Webhook Destroyer\obj\Release\net8.0-windows\Hira Webhook Destroyer.csproj.CoreCompileInputs.cache
+C:\Users\Anonymous\source\repos\Hira Webhook Destroyer\Hira Webhook Destroyer\obj\Release\net8.0-windows\Hira Webhook Destroyer.dll
+C:\Users\Anonymous\source\repos\Hira Webhook Destroyer\Hira Webhook Destroyer\obj\Release\net8.0-windows\refint\Hira Webhook Destroyer.dll
+C:\Users\Anonymous\source\repos\Hira Webhook Destroyer\Hira Webhook Destroyer\obj\Release\net8.0-windows\Hira Webhook Destroyer.pdb
+C:\Users\Anonymous\source\repos\Hira Webhook Destroyer\Hira Webhook Destroyer\obj\Release\net8.0-windows\Hira Webhook Destroyer.genruntimeconfig.cache
+C:\Users\Anonymous\source\repos\Hira Webhook Destroyer\Hira Webhook Destroyer\obj\Release\net8.0-windows\ref\Hira Webhook Destroyer.dll

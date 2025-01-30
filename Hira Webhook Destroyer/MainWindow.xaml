@@ -1,0 +1,193 @@
+﻿<Window x:Class="Hira_Webhook_Destroyer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Webhook Tool" Height="650" Width="900"
+        WindowStartupLocation="CenterScreen"
+        Background="#0F0F0F"
+        FontFamily="Segoe UI">
+
+    <Window.Resources>
+        <!-- Style des boutons modernes -->
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#007ACC"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="20 10"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" 
+                                Background="{TemplateBinding Background}" 
+                                CornerRadius="8"
+                                SnapsToDevicePixels="True">
+                            <Grid>
+                                <Border x:Name="hoverEffect" 
+                                        Opacity="0" 
+                                        CornerRadius="8"
+                                        Background="#20FFFFFF"/>
+                                <ContentPresenter x:Name="contentPresenter"
+                                                  HorizontalAlignment="Center"
+                                                  VerticalAlignment="Center"
+                                                  Margin="{TemplateBinding Padding}"/>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="hoverEffect" Property="Opacity" Value="1"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#005F9E"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Style des zones de texte -->
+        <Style TargetType="TextBox">
+            <Setter Property="Background" Value="#1A1A1A"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="15 10"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="CaretBrush" Value="#007ACC"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border x:Name="border" 
+                                Background="{TemplateBinding Background}" 
+                                CornerRadius="8"
+                                SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#212121"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="25">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Titre -->
+        <TextBlock Grid.Row="0" 
+                   Text="Discord Webhook Tool" 
+                   FontSize="28" 
+                   FontWeight="Medium"
+                   Foreground="White"
+                   HorizontalAlignment="Center"
+                   Margin="0 0 0 40">
+            <TextBlock.Effect>
+                <DropShadowEffect Color="#007ACC" Opacity="0.4" BlurRadius="20"/>
+            </TextBlock.Effect>
+        </TextBlock>
+
+        <!-- Webhook URL Input -->
+        <StackPanel Grid.Row="1" Margin="0 0 0 20">
+            <TextBlock Text="Webhook URL" 
+                       Foreground="#A0A0A0"
+                       Margin="0 0 0 5"
+                       FontSize="13"/>
+            <TextBox x:Name="WebhookUrlTextBox" 
+                     Height="40"
+                     ToolTip="Enter Webhook URL"/>
+        </StackPanel>
+
+        <!-- Message Input -->
+        <StackPanel Grid.Row="2" Margin="0 0 0 20">
+            <TextBlock Text="Message (Optional)" 
+                       Foreground="#A0A0A0"
+                       Margin="0 0 0 5"
+                       FontSize="13"/>
+            <TextBox x:Name="MessageTextBox" 
+                     Height="40"
+                     ToolTip="Enter Message"/>
+        </StackPanel>
+
+        <!-- Spam Settings -->
+        <StackPanel Grid.Row="3" Margin="0 0 0 30">
+            <TextBlock Text="Spam Settings" 
+                       Foreground="#A0A0A0"
+                       FontSize="15"
+                       Margin="0 0 0 10"/>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Margin="0 0 10 0">
+                    <TextBlock Text="Number of Messages" 
+                               Foreground="#808080"
+                               FontSize="12"/>
+                    <TextBox x:Name="SpamCountTextBox" 
+                             Text="10" 
+                             Height="40"
+                             Margin="0 5 0 0"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Margin="10 0">
+                    <TextBlock Text="Delay (ms)" 
+                               Foreground="#808080"
+                               FontSize="12"/>
+                    <TextBox x:Name="SpamDelayTextBox" 
+                             Text="1000" 
+                             Height="38"
+                             Margin="0 5 0 0"/>
+                </StackPanel>
+
+                <CheckBox x:Name="RandomMessageCheckBox" 
+                          Grid.Column="2"
+                          Content="Random Messages" 
+                          Foreground="#A0A0A0"
+                          VerticalAlignment="Bottom"
+                          Margin="10 0 0 0"/>
+            </Grid>
+        </StackPanel>
+
+        <!-- Action Buttons -->
+        <StackPanel Grid.Row="4" 
+                    Orientation="Horizontal" 
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    Margin="0 20">
+            <Button x:Name="SendMessageButton" 
+                    Content="Send Message" 
+                    Width="140"
+                    Click="SendMessageButton_Click"
+                    Background="#007ACC"/>
+
+            <Button x:Name="DeleteWebhookButton" 
+                    Content="Delete Webhook" 
+                    Width="145"
+                    Click="DeleteWebhookButton_Click"
+                    Background="#E53935"
+                    Margin="20 0"/>
+            <Button x:Name="SpamButton" 
+                    Content="Start Spam" 
+                    Width="140"
+                    Click="SpamButton_Click"
+                    Background="#4CAF50"
+                    />
+        </StackPanel>
+    </Grid>
+</Window>
